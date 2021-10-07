@@ -19,33 +19,39 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             //Add score
             RoundScores += dice;
             document.querySelector('#currentPlayer-' + PlayerActive).textContent = RoundScores;
-            nextPart();
+            nextPart(); }
         
         //Update the round score IF the rolled number was a 1
-        if (dice == 1) {
+        else{ (dice == 1) 
             //Add score
             document.querySelector('#n-' + PlayerActive).textContent = 'Start again, you have lost!';
             document.getElementById('dice-1').style.display = 'none';
             Playing = false;
         } 
-    } 
+    
 }   
 });
 
 // Update
 function nextPart() {
+    console.log(nextPart);
     
     // Add CURRENT score to GLOBAL score
     Scores[PlayerActive] += RoundScores;
     document.querySelector('#s-' + PlayerActive).textContent = Scores[PlayerActive];
+
+
+
+    var input = Scores[PlayerActive];
     var winningScore;
-            
+    
+
     // Undefined - false. else - true
     if(input) {
         winningScore = input;
                 } 
     else {
-        winningScore = 15;
+        winningScore = 20;
                 }
             
     // Check if player won the game
