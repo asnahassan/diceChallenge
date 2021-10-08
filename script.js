@@ -23,7 +23,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         else{ (dice == 1) 
             //Add score
             document.querySelector('#n-' + PlayerActive).textContent = 'Start again, you have lost!';
-            document.getElementById('dice-1').style.display = 'none';
+            // document.getElementById('dice-1').style.display = 'none';
             Playing = false;
         }    
 }   
